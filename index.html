@@ -669,6 +669,9 @@ h1 {
     .nav-rail.collapsed {
         transform: translateY(100%) !important;
     }
+    .nav-logo {
+        display: none; /* Hide logo on mobile */
+    }
     .music-player {
         margin: 0;
         flex-direction: row;
@@ -676,6 +679,18 @@ h1 {
         top: 20px;
         right: 20px;
         z-index: 102;
+        gap: 8px; /* Reduce gap */
+    }
+    .music-btn {
+        width: 50px; /* Make smaller */
+        height: 50px;
+    }
+    .music-btn svg {
+        width: 24px; /* Make icon smaller */
+        height: 24px;
+    }
+    .music-visualizer {
+        height: 16px; /* Make visualizer smaller */
     }
     .sidebar-toggle {
         top: auto;
@@ -683,11 +698,14 @@ h1 {
         left: 20px;
     }
     .stage { 
-        padding: 40px 20px 120px 20px; 
+        padding: 80px 20px 120px 20px; /* Increased top padding */
         margin-left: 0 !important;
     }
     h1 { font-size: 3rem; }
-    #poem-display { font-size: 1.5rem; }
+    #poem-display { 
+        font-size: 1.5rem;
+        padding-top: 20px; /* Add extra padding for poem */
+    }
     .glass-paper { padding: 40px 30px; }
     .gallery { 
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -695,6 +713,8 @@ h1 {
     }
     .welcome-message {
         padding: 40px 30px;
+        width: 90%; /* Make welcome message responsive */
+        max-width: 500px;
     }
     .welcome-message h2 {
         font-size: 2rem;
